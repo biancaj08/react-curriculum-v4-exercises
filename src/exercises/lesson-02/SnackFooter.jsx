@@ -1,3 +1,7 @@
 export default function Footer() {
-  <footer className="I love snacks"></footer>;
+  return (
+    <footer>
+      <h3>I love snacks!</h3>
+    </footer>
+  );
 }

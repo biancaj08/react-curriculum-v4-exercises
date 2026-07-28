@@ -1,48 +1,27 @@
-function SnackList() {
-  const snacks = [
-    {
-      id: 0,
-      name: 'Peanut M&Ms',
-      rank: 5,
-    },
-    {
-      id: 1,
-      name: 'pretzel sticks',
-      rank: 4,
-    },
+//Default export a component that **contains** an array of snack objects (each with `name` and `rank`, where `1` = favorite).
+//Start with the array ordered from **least favorite to most favorite**.
+//Use JavaScript’s `.toSorted()` to return a new array ordered from **most favorite (rank 1) to least favorite**.
+//Render the sorted snacks as a list (ordered list or using `.map()`).
+//Include at least **3–5** snacks.
 
-    {
-      id: 2,
-      name: 'beef sticks',
-      rank: 3,
-    },
-    {
-      id: 3,
-      name: 'dates',
-      rank: 2,
-    },
-    {
-      id: 4,
-      name: 'popcorn',
-      rank: 1,
-    },
+const SnackList = () => {
+  const snacks = [
+    { name: 'peanut m&ms', rank: 5 },
+    { name: 'pretzel sticks', rank: 4 },
+    { name: 'beef sticks', rank: 3 },
+    { name: 'dates', rank: 2 },
+    { name: 'popcorn', rank: 1 },
   ];
 
-  const snackSorted = [...snacks];
-  {
-    snackSorted.toSorted();
-  }
+  const sortedSnacks = snacks.toSorted((a, b) => a.rank - b.rank);
 
   return (
-    <>
-      <ol>
-        {snackSorted.map((snacks) => (
-          <li key={snacks.id}>{snacks.name}</li>
-        ))}
-        ;
-      </ol>
-    </>
+    <ol>
+      {sortedSnacks.map((snack) => (
+        <li key={snack.name}>{snack.name}</li>
+      ))}
+    </ol>
   );
-}
+};
 
 export default SnackList;

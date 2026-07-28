@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <section>
+    <header>
       <h1>The Best Snacks Ranked</h1>
-    </section>
+    </header>
   );
 }

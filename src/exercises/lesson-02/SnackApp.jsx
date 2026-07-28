@@ -2,7 +2,7 @@ import Footer from './SnackFooter';
 import Header from './SnackHeader';
 import SnackList from './SnackList';
 
-export default function SnackApp() {
+const SnackApp = () => {
   return (
     <>
       <Header />
@@ -10,4 +10,6 @@ export default function SnackApp() {
       <Footer />
     </>
   );
-}
+};
+
+export default SnackApp;

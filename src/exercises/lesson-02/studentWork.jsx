@@ -3,17 +3,11 @@
 //Import components here
 
 import SnackApp from './SnackApp';
-import { render } from 'react-dom';
-
-const domNode = document.getElementById('root');
-const root = createRoot(domNode);
 
 export default function StudentWork() {
   return (
     <div>
-      <p> Student output will go here</p>
+      <SnackApp />
     </div>
   );
 }
-
-render(<SnackApp />, root);
