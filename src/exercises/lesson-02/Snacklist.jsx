@@ -7,7 +7,7 @@
 const SnackList = () => {
   const snacks = [
     { name: 'peanut m&ms', rank: 5 },
-    { name: 'pretzel sticks', rank: 4 },
+    { name: 'bbq chips', rank: 4 },
     { name: 'beef sticks', rank: 3 },
     { name: 'dates', rank: 2 },
     { name: 'popcorn', rank: 1 },
