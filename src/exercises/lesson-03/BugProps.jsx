@@ -12,11 +12,13 @@
   Use the commented "Explanation" section at the bottom of this lesson's components.
 */
 
+import { useState } from 'react';
+
 export default function BugProps({ name = 'friend' }) {
-  let message = 'Hello, ' + name;
+  const [message, setMessage] = useState(`Hello, ${name}`);
 
   function handleChange() {
-    message = 'Hi, ' + name + '!';
+    setMessage(`Hi, ${name} !`);
   }
 
   return (
@@ -28,4 +30,6 @@ export default function BugProps({ name = 'friend' }) {
 }
 
 // Explanation:
-// (Write your explanation here)
+// The default reference to the name variable was invalid because it is JavaScript and so brackets are needed around the variable
+//in addition to this it is important to use useState in order for React to be able to track the changes and
+//correctly utilie the handleChange function

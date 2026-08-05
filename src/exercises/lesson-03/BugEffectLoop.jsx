@@ -15,10 +15,11 @@ export default function BugEffectLoop() {
 
   useEffect(() => {
     setCount(count + 1);
-  });
+  }, []);
 
   return <p>Bug 1 Count: {count}</p>;
 }
 
 // Explanation:
-// (Write your explanation here)
+// adding the empty dependency communicates to react to only render the function on mount instead of
+//every time the app is render
