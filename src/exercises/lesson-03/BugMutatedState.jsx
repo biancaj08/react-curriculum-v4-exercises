@@ -9,12 +9,12 @@
 */
 
 import { useState } from 'react';
+
 export default function BugMutatedState() {
   let [count, setCount] = useState(0);
 
   function handleAdd() {
-    count++;
-    setCount(count);
+    setCount((previous) => previous + 1);
   }
 
   return (
@@ -26,4 +26,5 @@ export default function BugMutatedState() {
 }
 
 // Explanation:
-// (Write your explanation here)
+// functional updating (adding 1 to the previous state) is more optimal so that if batch calls are made
+//on the button it will behave expectedly, incrementing twice rather than only incrementing once
